@@ -42,8 +42,15 @@ public void clickAddNewUser() {
     addNewUserPage.setPwField("testmanager");
     addNewUserPage.setDeclineEmail();
     addNewUserPage.setSubmitBtn();
+    addNewUserPage.setRolesPage();
+    addNewUserPage.setNewRoleBtn();
+    addNewUserPage.selectUserFromRoles("1119");
+    addNewUserPage.selectRoleDesignForUser("Floor Tech");
+    addNewUserPage.setRoleSubmitBtn();
+
     addNewUserPage.setLogOut();
     LoginPage.testManagerLogin();
+
     homePage.clickManagerTools().clickUsers().clickAddNewUser();
     addNewUserPage.setFirstNameField("Employee");
 

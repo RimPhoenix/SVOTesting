@@ -20,6 +20,13 @@ public class AddNewUserPage {
     private By pwField = By.id("password_user-new");
     private By declineEmail = By.id("declined_email_user-new");
     private By submitBtn = By.name("commit");
+    private String rolesPage = "http://www.svo.sh/hats";
+    private By newRoleBtn = By.xpath("//button[@class='btn btn-primary multi-edit show-hat-form collapse show']");
+    private Select findUserForRole(){return new Select(driver.findElement(newRoleBtn));}
+    private By roleDesignList = By.id("hat_design_hat-new");
+    private Select findRoleDesign() {return new Select(driver.findElement(roleDesignList));}
+    private By roleSubmitBtn = By.xpath("//button[contains(text(),'Submit')]");
+
     private String logOut = "http://www.svo.sh/access/logout";
     private String deleteManagerPage = "http://www.svo.sh/users/1119/delete";
     private By userSearchField = By.xpath("//label[contains(text(),'Search:')]//input");
@@ -52,6 +59,16 @@ public class AddNewUserPage {
     public void setPwField(String password) {driver.findElement(pwField).sendKeys(password);}
 
     public void setSubmitBtn(){driver.findElement(submitBtn).click();}
+
+    public void setRolesPage(){driver.get(rolesPage);}
+
+    public void setNewRoleBtn(){driver.findElement(newRoleBtn).click();}
+
+    public void selectUserFromRoles(String userID) {findUserForRole().selectByValue(userID); }
+
+    public void selectRoleDesignForUser(String roleDesign) {findRoleDesign().selectByVisibleText(roleDesign);}
+
+    public void setRoleSubmitBtn(){driver.findElement(roleSubmitBtn).click();}
 
     public void setLogOut(){driver.get(logOut);}
 
