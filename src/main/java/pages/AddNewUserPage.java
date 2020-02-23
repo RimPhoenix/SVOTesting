@@ -14,6 +14,15 @@ public class AddNewUserPage {
     private By idField = By.id("user_id_user-new");
     private By roleField = By.id("role_user-new");
     private Select findRole() {return new Select(driver.findElement(roleField));}
+    private By storeField = By.id("store_ids_user-new");
+    private Select chooseStore() {return new Select(driver.findElement(storeField));}
+    private By editPW = By.id("edit_pw");
+    private By pwField = By.id("password_user-new");
+    private By declineEmail = By.id("declined_email_user-new");
+    private By submitBtn = By.name("commit");
+    private String logOut = "http://www.svo.sh/access/logout";
+    private String deleteManagerPage = "http://www.svo.sh/users/1119/delete";
+    private By userSearchField = By.xpath("//label[contains(text(),'Search:')]//input");
 
     public AddNewUserPage(WebDriver driver){this.driver = driver;}
 
@@ -34,5 +43,23 @@ public class AddNewUserPage {
 
     public void selectFromRoles(String role) {findRole().selectByValue(role); }
 
-    
+    public void selectStore(String store) {chooseStore().selectByVisibleText(store);}
+
+    public void setEditPW(){driver.findElement(editPW).click();}
+
+    public void setDeclineEmail(){driver.findElement(declineEmail).click();}
+
+    public void setPwField(String password) {driver.findElement(pwField).sendKeys(password);}
+
+    public void setSubmitBtn(){driver.findElement(submitBtn).click();}
+
+    public void setLogOut(){driver.get(logOut);}
+
+    public void setDeleteManagerPage(){driver.get(deleteManagerPage);}
+
+    public void setUserSearchField(String userID){driver.findElement(userSearchField).sendKeys(userID);}
+
+
+
+
 }

@@ -82,7 +82,6 @@ public class LoginPage {
         WebElement loginButton = driver.findElement(By.name("button"));
         loginButton.click();
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Test1 Employee']")));
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Test1 Employee']")));
         System.out.println("You are logged in as " + "Test1 Employee");
 
@@ -184,6 +183,21 @@ public class LoginPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Test1 HomeOfficeStaff']")));
         System.out.println("You are logged in as " + "Test1 HomeOfficeStaff");
+    }
+
+    public static void testManagerLogin(){
+        WebElement idBox = driver.findElement(By.name("id"));
+        idBox.click();
+        idBox.sendKeys(Constants.TestManagerID);
+
+        WebElement pwBox = driver.findElement(By.name("password"));
+        pwBox.click();
+        pwBox.sendKeys(Constants.TestManagerPW);
+        WebElement loginButton = driver.findElement(By.name("button"));
+        loginButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Manager TestCreated']")));
+        System.out.println("You are logged in as " + "Manager TestCreated");
     }
 
 

@@ -20,7 +20,7 @@ public class CreateTests extends BaseTests {
 
     @Test
 
-public void clickAddNewUser() throws InterruptedException {
+public void clickAddNewUser() {
 
     LoginPage.adminLogin();
     var addNewUser = homePage.clickManagerTools().clickUsers().clickAddNewUser();
@@ -30,13 +30,32 @@ public void clickAddNewUser() throws InterruptedException {
 }
 
 @Test
-    public void CreateManager() throws InterruptedException {
+    public void CreateManager() {
     LoginPage.adminLogin();
     AddNewUserPage addNewUserPage = homePage.clickManagerTools().clickUsers().clickAddNewUser();
     addNewUserPage.setFirstNameField("Manager");
     addNewUserPage.setLastNameField("TestCreated");
     addNewUserPage.setIdField("1119");
     addNewUserPage.selectFromRoles("manager");
+    addNewUserPage.selectStore("North Little Rock");
+    addNewUserPage.setEditPW();
+    addNewUserPage.setPwField("testmanager");
+    addNewUserPage.setDeclineEmail();
+    addNewUserPage.setSubmitBtn();
+    addNewUserPage.setLogOut();
+    LoginPage.testManagerLogin();
+    homePage.clickManagerTools().clickUsers().clickAddNewUser();
+    addNewUserPage.setFirstNameField("Employee");
+
+    //delete TestCreated Manager
+    addNewUserPage.setLogOut();
+    LoginPage.adminLogin();
+    homePage.clickManagerTools().clickUsers();
+    addNewUserPage.setDeleteManagerPage();
+    addNewUserPage.setSubmitBtn();
+
+
+
 
 
 

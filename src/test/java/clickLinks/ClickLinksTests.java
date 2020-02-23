@@ -27,8 +27,6 @@ public class ClickLinksTests extends BaseTests {
         driver.get(baseUrl + path );        System.out.println(driver.getTitle() + "  -->  " + path);
     }
 
-
-
     @Test
     public void testURLs() {
         //used in the AccessLevelTests, If you want to run this by it's self add a LoginPage.(any login level you desire) before the checkUrl
