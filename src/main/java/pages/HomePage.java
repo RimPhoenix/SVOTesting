@@ -11,7 +11,15 @@ import org.openqa.selenium.WebDriver;
             this.driver = driver;
         }
 
+        private By clockInBtn = By.xpath("//div[@class='d-lg-block d-none']//input[@name='commit']");
+        private By confirmClockIn = By.xpath("//h3[@class='clocked-in-header']");
+        private By confirmClockOut = By.xpath("//h3[@class='h5 clocked-in-header']");
+
         private void clickLink(String linkText) {driver.findElement(By.linkText(linkText)).click();}
+
+        public void setClockInBtn(){driver.findElement(clockInBtn).click();}
+        public String setConfirmClockIn(){return driver.findElement(confirmClockIn).getText();}
+        public String setConfirmClockOut(){return driver.findElement(confirmClockOut).getText();}
 
         public PatientsPage clickPatients(){
             clickLink("Patients");
@@ -57,4 +65,6 @@ import org.openqa.selenium.WebDriver;
             clickLink("Manager Tools");
             return new ManagerToolsPage(driver);
         }
+
+
 }
