@@ -1,30 +1,19 @@
 package clickLinks;
 
 import base.BaseTests;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.events.EventFiringWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-import utils.Constants;
-
-import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
 public class ClickLinksTests extends BaseTests {
 
 
-     String baseUrl = "http://www.svo.sh/";
+    String baseUrl = "http://www.svo.sh/";
 
-  //  public ClickLinksTests(WebDriver driver) { this.driver = driver }
+    //  public ClickLinksTests(WebDriver driver) { this.driver = driver }
 
 
-    private void checkUrl( String path){
-        driver.get(baseUrl + path );        System.out.println(driver.getTitle() + "  -->  " + path);
+    private void checkUrl(String path) {
+        driver.get(baseUrl + path);
+        System.out.println(driver.getTitle() + "  -->  " + path);
     }
 
     @Test
@@ -216,7 +205,7 @@ public class ClickLinksTests extends BaseTests {
         checkUrl("api/v1/1/jobs");
         checkUrl("api/");
         checkUrl("api_update/");
-        checkUrl("access/logout" );          //works but logs you out so all later tests are the login screen, maybe save for last
+        checkUrl("access/logout");          //works but logs you out so all later tests are the login screen, maybe save for last
     }
 
 }

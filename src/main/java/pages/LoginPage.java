@@ -1,23 +1,26 @@
 package pages;
 
-import okio.Timeout;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
+
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
 
 
 public class LoginPage {
 
     private static EventFiringWebDriver driver;
 
-    public LoginPage(EventFiringWebDriver driver){this.driver = driver;}
-
+    public LoginPage(EventFiringWebDriver driver) {
+        this.driver = driver;
+    }
 
 
     //public void login(String userName, String passWord){        }
@@ -48,7 +51,8 @@ public class LoginPage {
 
         driver.findElement(By.xpath("//a[@href='/access/profile' and text()='Robbie Moritz']"));
     }
-    public static void managerLogin(){
+
+    public static void managerLogin() {
 
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
@@ -71,7 +75,8 @@ public class LoginPage {
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Test1 Manager']")));
         System.out.println("You are logged in as " + "Test1 Manager");
     }
-    public static void level1EmployeeLogin(){
+
+    public static void level1EmployeeLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.Level1EmployeeID);
@@ -87,7 +92,7 @@ public class LoginPage {
 
     }
 
-    public static void level2EmployeeLogin(){
+    public static void level2EmployeeLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.Level2EmployeeID);
@@ -102,7 +107,7 @@ public class LoginPage {
 
     }
 
-    public static void level3EmployeeLogin(){
+    public static void level3EmployeeLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.Level3EmployeeID);
@@ -133,7 +138,7 @@ public class LoginPage {
 
     }
 
-    public static void storeIPadLogin(){
+    public static void storeIPadLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.StoreIPadID);
@@ -147,7 +152,8 @@ public class LoginPage {
         System.out.println("You are logged in as " + "Test2 StoreIpad");
 
     }
-    public static void successHoldingsStaffLogin(){
+
+    public static void successHoldingsStaffLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.SuccessHoldingsStaffID);
@@ -161,7 +167,7 @@ public class LoginPage {
         System.out.println("You are logged in as " + "Test1 SuccessHoldingsStaff");
     }
 
-    public static void homeOfficeStaffLogin(){
+    public static void homeOfficeStaffLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.HomeOfficeStaffID);
@@ -185,7 +191,7 @@ public class LoginPage {
         System.out.println("You are logged in as " + "Test1 HomeOfficeStaff");
     }
 
-    public static void testManagerLogin(){
+    public static void testManagerLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
         idBox.sendKeys(Constants.TestManagerID);

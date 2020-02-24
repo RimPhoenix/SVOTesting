@@ -3,13 +3,14 @@ package myclockins;
 import base.BaseTests;
 import org.testng.annotations.Test;
 import pages.LoginPage;
+
 import static org.testng.Assert.assertEquals;
 
 public class ClockInTests extends BaseTests {
 
     @Test
 
-    public void clockIn(){
+    public void clockIn() {
         //Login
         LoginPage.adminLogin();
         //Clock In

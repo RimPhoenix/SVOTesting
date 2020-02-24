@@ -1,85 +1,83 @@
 package accessLevel;
 
-import base.BaseTests;
 import clickLinks.ClickLinksTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
 
 public class AccessLevelTests extends ClickLinksTests {
 
-    private void homePageListed(){
+    private void homePageListed() {
         System.out.println(driver.getTitle() + "  HomePage listed after login");
     }
 
     @Test
-    public void testAccessForAdmin(){
+    public void testAccessForAdmin() {
         LoginPage.adminLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForManager(){
+    public void testAccessForManager() {
         LoginPage.managerLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForLevel1Employee(){
+    public void testAccessForLevel1Employee() {
         LoginPage.level1EmployeeLogin();
-        homePageListed();testURLs();
+        homePageListed();
+        testURLs();
     }
 
     @Test
-    public void testAccessForLevel2Employee(){
+    public void testAccessForLevel2Employee() {
         LoginPage.level2EmployeeLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForLevel3Employee(){
+    public void testAccessForLevel3Employee() {
         LoginPage.level3EmployeeLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForNoAccess(){
+    public void testAccessForNoAccess() {
         LoginPage.noAccessLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForStoreIPad(){
+    public void testAccessForStoreIPad() {
         LoginPage.storeIPadLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForSuccessHoldingsStaff(){
+    public void testAccessForSuccessHoldingsStaff() {
         LoginPage.successHoldingsStaffLogin();
         homePageListed();
         testURLs();
     }
 
     @Test
-    public void testAccessForHomeOfficeStaff(){
+    public void testAccessForHomeOfficeStaff() {
         LoginPage.homeOfficeStaffLogin();
         homePageListed();
         testURLs();
     }
+
     @Test
-    public void testAccessForNotSignedIn(){
+    public void testAccessForNotSignedIn() {
         testURLs();
     }
-
-
 
 
 }
