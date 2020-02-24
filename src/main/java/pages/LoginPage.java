@@ -19,7 +19,7 @@ public class LoginPage {
     private static EventFiringWebDriver driver;
 
     public LoginPage(EventFiringWebDriver driver) {
-        this.driver = driver;
+        LoginPage.driver = driver;
     }
 
 

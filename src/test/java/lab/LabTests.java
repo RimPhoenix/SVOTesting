@@ -1,7 +1,6 @@
 package lab;
 
 import base.BaseTests;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 

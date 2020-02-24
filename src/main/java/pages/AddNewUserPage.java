@@ -26,7 +26,6 @@ public class AddNewUserPage {
     private By pwField = By.id("password_user-new");
     private By declineEmail = By.id("declined_email_user-new");
     private By submitBtn = By.name("commit");
-    private String rolesPage = "http://www.svo.sh/hats";
     private By newRoleBtn = By.xpath("//button[@class='btn btn-primary multi-edit show-hat-form collapse show']");
 
     private Select findUserForRole() {
@@ -41,8 +40,6 @@ public class AddNewUserPage {
 
     private By roleSubmitBtn = By.xpath("//button[contains(text(),'Submit')]");
 
-    private String logOut = "http://www.svo.sh/access/logout";
-    private String deleteManagerPage = "http://www.svo.sh/users/1119/delete";
     private By userSearchField = By.xpath("//label[contains(text(),'Search:')]//input");
 
     public AddNewUserPage(WebDriver driver) {
@@ -90,6 +87,7 @@ public class AddNewUserPage {
     }
 
     public void setRolesPage() {
+        String rolesPage = "http://www.svo.sh/hats";
         driver.get(rolesPage);
     }
 
@@ -110,10 +108,12 @@ public class AddNewUserPage {
     }
 
     public void setLogOut() {
+        String logOut = "http://www.svo.sh/access/logout";
         driver.get(logOut);
     }
 
     public void setDeleteManagerPage() {
+        String deleteManagerPage = "http://www.svo.sh/users/1119/delete";
         driver.get(deleteManagerPage);
     }
 

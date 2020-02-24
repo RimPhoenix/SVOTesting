@@ -23,7 +23,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-public class BaseTests {//extends LoginPage {
+public class BaseTests {
 
     public EventFiringWebDriver driver;
     public WebDriverWait wait;
@@ -81,7 +81,7 @@ public class BaseTests {//extends LoginPage {
         }
     }
 
-    // ****** If you want a ScreenShot after every method use this code.
+    // ****** If you want a ScreenShot after every method (pass or fail) use this code.
     //    public void takeScreenshot(){
 //        var camera = (TakesScreenshot)driver;
 //        File screenshot = camera.getScreenshotAs(OutputType.FILE);

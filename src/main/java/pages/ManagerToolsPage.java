@@ -1,6 +1,5 @@
 package pages;
 
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -13,12 +12,12 @@ public class ManagerToolsPage {
 
 
 
-    private void clickLink(String linkText) {driver.findElement(By.linkText(linkText)).click();}
+    private void clickLink() {driver.findElement(By.linkText("Users")).click();}
 
 
 
     public UsersPage clickUsers() {
-        clickLink("Users");
+        clickLink();
         return new UsersPage(driver);
     }
 }
