@@ -39,7 +39,6 @@ public class AddNewUserPage {
     }
 
     private By roleSubmitBtn = By.xpath("//button[contains(text(),'Submit')]");
-
     private By userSearchField = By.xpath("//label[contains(text(),'Search:')]//input");
 
     public AddNewUserPage(WebDriver driver) {
