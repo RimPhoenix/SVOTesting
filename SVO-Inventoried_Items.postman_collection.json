@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "d035fc08-10a4-4725-a8e2-0dd6b5f5cadd",
+		"name": "SVO-Inventoried_Items",
+		"description": "List of items",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "svo.sh/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "svo.sh/",
+					"host": [
+						"svo",
+						"sh"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "Ping"
+			},
+			"response": []
+		},
+		{
+			"name": "http://www.svo.sh/",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2154ccdb-a244-430c-8ba1-557acc953105",
+						"exec": [
+							"// Parse HTML and get the CSRF token",
+							"var responseHTML = cheerio(pm.responce.text()); ",
+							"",
+							"var csrfTokenValue = response.HTML.find('[name=\"authenticity_token\"]').val",
+							"console.log(csrfTokenValue)",
+							"pm.globals.set(\"csrfTokenValue\", csrfTokenValue);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://www.svo.sh/",
+					"protocol": "http",
+					"host": [
+						"www",
+						"svo",
+						"sh"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
