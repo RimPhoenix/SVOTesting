@@ -26,19 +26,19 @@ public class CreateTests extends BaseTests {
     public void CreateManager() {
         LoginPage.adminLogin();
         AddNewUserPage addNewUserPage = homePage.clickManagerTools().clickUsers().clickAddNewUser();
-        addNewUserPage.setFirstNameField("Manager");
-        addNewUserPage.setLastNameField("TestCreated");
-        addNewUserPage.setIdField("1119");
-        addNewUserPage.selectFromRoles("manager");
-        addNewUserPage.selectStore("North Little Rock");
-        addNewUserPage.setEditPW();
-        addNewUserPage.setPwField("testmanager");
-        addNewUserPage.setDeclineEmail();
-        addNewUserPage.setSubmitBtn();
+//        addNewUserPage.setFirstNameField("Manager");
+//        addNewUserPage.setLastNameField("TestCreated");
+//        addNewUserPage.setIdField("1129");
+//        addNewUserPage.selectFromRoles("manager");
+//        addNewUserPage.selectStore("North Little Rock");
+//        addNewUserPage.setEditPW();
+//        addNewUserPage.setPwField("testmanager");
+//        addNewUserPage.setDeclineEmail();
+//        addNewUserPage.setSubmitBtn();
         addNewUserPage.setRolesPage();
         addNewUserPage.setNewRoleBtn();
-        addNewUserPage.selectUserFromRoles("1119");
-        addNewUserPage.selectRoleDesignForUser("Floor Tech");
+        addNewUserPage.selectUserFromRoles("1129");
+        addNewUserPage.selectRoleDesignForUser("6");
         addNewUserPage.setRoleSubmitBtn();
 
         addNewUserPage.setLogOut();

@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.awt.*;
+
 public class AddNewUserPage {
 
     private WebDriver driver;
@@ -26,10 +28,11 @@ public class AddNewUserPage {
     private By pwField = By.id("password_user-new");
     private By declineEmail = By.id("declined_email_user-new");
     private By submitBtn = By.name("commit");
-    private By newRoleBtn = By.xpath("//button[@class='btn btn-primary multi-edit show-hat-form collapse show']");
+    private By newRoleBtn = By.xpath("//*[@class='svg-inline--fa fa-user-cog fa-w-20']");
+    private By newRoleField = By.id("select2-user_hat-new-container");
 
     private Select findUserForRole() {
-        return new Select(driver.findElement(newRoleBtn));
+        return new Select(driver.findElement(newRoleField));
     }
 
     private By roleDesignList = By.id("hat_design_hat-new");
@@ -99,7 +102,7 @@ public class AddNewUserPage {
     }
 
     public void selectRoleDesignForUser(String roleDesign) {
-        findRoleDesign().selectByVisibleText(roleDesign);
+        findRoleDesign().selectByValue(roleDesign);
     }
 
     public void setRoleSubmitBtn() {
@@ -112,7 +115,7 @@ public class AddNewUserPage {
     }
 
     public void setDeleteManagerPage() {
-        String deleteManagerPage = "http://www.svo.sh/users/1119/delete";
+        String deleteManagerPage = "http://www.svo.sh/users/1128/delete";
         driver.get(deleteManagerPage);
     }
 
