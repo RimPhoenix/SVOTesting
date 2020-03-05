@@ -57,8 +57,6 @@ public class CreateTests extends BaseTests {
 //        addNewUserPage.setSubmitBtn();
 
 
-        // Creating a patient
-        addNewUserPage.setAddNewPatientBtn();
 
 
         //delete TestCreated Manager
