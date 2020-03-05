@@ -22,5 +22,7 @@ public interface Constants {
     String HomeOfficeStaffPW = "hospassword";
     String TestManagerID = "1121";
     String TestManagerPW = "testmanager";
+    String TestEmployeeID = "1130";
+    String TestEmployeePW = "testemployee";
 
 }

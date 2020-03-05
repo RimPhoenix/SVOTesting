@@ -23,7 +23,7 @@ public class CreateTests extends BaseTests {
     }
 
     @Test
-    public void CreateManager() {
+    public void createManager() {
         LoginPage.adminLogin();
         AddNewUserPage addNewUserPage = homePage.clickManagerTools().clickUsers().clickAddNewUser();
 //        addNewUserPage.setFirstNameField("Manager");
@@ -37,6 +37,7 @@ public class CreateTests extends BaseTests {
 //        addNewUserPage.setSubmitBtn();
         addNewUserPage.setRolesPage();
         addNewUserPage.setNewRoleBtn();
+        addNewUserPage.setNewRoleField();
         addNewUserPage.selectUserFromRoles("1129");
         addNewUserPage.selectRoleDesignForUser("6");
         addNewUserPage.setRoleSubmitBtn();
@@ -45,7 +46,20 @@ public class CreateTests extends BaseTests {
         LoginPage.testManagerLogin();
 
         homePage.clickManagerTools().clickUsers().clickAddNewUser();
-        addNewUserPage.setFirstNameField("Employee");
+//        addNewUserPage.setFirstNameField("Employee");
+//        addNewUserPage.setLastNameField("TestByManager");
+//        addNewUserPage.setIdField("1130");
+//        addNewUserPage.selectFromRoles("level_1_employee");
+//        addNewUserPage.selectStore("North Little Rock");
+//        addNewUserPage.setEditPW();
+//        addNewUserPage.setPwField("testemployee");
+//        addNewUserPage.setDeclineEmail();
+//        addNewUserPage.setSubmitBtn();
+
+
+        // Creating a patient
+        addNewUserPage.setAddNewPatientBtn();
+
 
         //delete TestCreated Manager
         addNewUserPage.setLogOut();

@@ -31,8 +31,8 @@ public class LoginPage {
 
         WebElement pwBox = driver.findElement(By.name("password"));
         pwBox.click();
-        pwBox.sendKeys(Constants.AdminPW);
-        pwBox.sendKeys(Keys.ENTER);
+        pwBox.sendKeys((Constants.AdminPW) + (Keys.ENTER));
+        //pwBox.sendKeys(Keys.ENTER);
 
         FluentWait wait = new FluentWait(driver)
                 .withTimeout(Duration.ofSeconds(10))
@@ -205,6 +205,21 @@ public class LoginPage {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Manager TestCreated']")));
         printLoggedInMessage("Manager TestCreated");
+    }
+    public static void level1TestEmployeeLogin() {
+        WebElement idBox = driver.findElement(By.name("id"));
+        idBox.click();
+        idBox.sendKeys(Constants.TestEmployeeID);
+
+        WebElement pwBox = driver.findElement(By.name("password"));
+        pwBox.click();
+        pwBox.sendKeys(Constants.TestEmployeePW);
+        WebElement loginButton = driver.findElement(By.name("button"));
+        loginButton.click();
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Employee TestByManager']")));
+        printLoggedInMessage("Employee TestByManager");
+
     }
 
 

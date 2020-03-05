@@ -1,10 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import java.awt.*;
 
 public class AddNewUserPage {
 
@@ -30,10 +29,8 @@ public class AddNewUserPage {
     private By submitBtn = By.name("commit");
     private By newRoleBtn = By.xpath("//*[@class='svg-inline--fa fa-user-cog fa-w-20']");
     private By newRoleField = By.id("select2-user_hat-new-container");
+    private By selectSearchField = By.xpath("//input[@class='select2-search__field']");
 
-    private Select findUserForRole() {
-        return new Select(driver.findElement(newRoleField));
-    }
 
     private By roleDesignList = By.id("hat_design_hat-new");
 
@@ -51,7 +48,7 @@ public class AddNewUserPage {
     public String getTitle() {
         return driver.getTitle();
     }
-
+    public void setNewRoleField() { driver.findElement(newRoleField).click(); }
     public void setFirstNameField(String firstName) {
         driver.findElement(firstNameField).sendKeys(firstName);
     }
@@ -97,8 +94,7 @@ public class AddNewUserPage {
         driver.findElement(newRoleBtn).click();
     }
 
-    public void selectUserFromRoles(String userID) {
-        findUserForRole().selectByValue(userID);
+    public void selectUserFromRoles(String userID) {driver.findElement(selectSearchField).sendKeys(userID + (Keys.ENTER));
     }
 
     public void selectRoleDesignForUser(String roleDesign) {
@@ -122,6 +118,7 @@ public class AddNewUserPage {
     public void setUserSearchField(String userID) {
         driver.findElement(userSearchField).sendKeys(userID);
     }
+
 
 
 }
