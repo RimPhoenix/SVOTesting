@@ -4,8 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class PatientsPage {
@@ -15,8 +19,6 @@ public class PatientsPage {
     private By resultText = By.id("dt-patient_100");
     private By closeBtn = By.xpath("//div[@id='search-patient-modal']");
     private By addNewPatientBtn = By.xpath("//button[@data-original-title='New Patient']");
-
-
 
     public PatientsPage(WebDriver driver)  {this.driver = driver;}
 
@@ -62,11 +64,20 @@ public class PatientsPage {
         driver.findElement(doctorSelect).click();}
 
     private By doctorSelectField = By.xpath("//input[@class='select2-search__field']");
-    public void setDoctorSelectField(){driver.findElement(doctorSelectField).sendKeys("Sam" + Keys.ENTER);}
+    public void setDoctorSelectField(String doctor){driver.findElement(doctorSelectField).sendKeys(doctor);}
 
-//    public AddNewPatientPage clickAddNewPatient(){
-//        driver.findElement(addNewPatientBtn).click();
-//        return new AddNewPatientPage(driver);
-//    }
+    private By rxType = By.id("rx_type_prescription-new");
+    public Select chooseRxType(){return new Select(driver.findElement(rxType));}
+    public void selectRxType(String rxType) {chooseRxType().selectByValue(rxType);
+    }
+    private By prescribedDate = By.id("prescribed_date_prescription-new");
+    public void setPrescribedDate(String todaysDate){driver.findElement(prescribedDate).sendKeys(todaysDate);}
+
+    private By odSphPrescription = By.id("od_sph_prescription-new");
+    public void setOdSphPrescription(String odSph){driver.findElement(odSphPrescription).sendKeys(odSph);}
+
+    private By osSphPrescription = By.id("os_sph_prescription-new");
+    public void setOsSphPrescription(String osSph){driver.findElement(osSphPrescription).sendKeys(osSph);}
+
 
 }

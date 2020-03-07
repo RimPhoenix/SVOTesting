@@ -21,6 +21,9 @@ import pages.ManagerToolsPage;
 import utils.WindowManager;
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 public class BaseTests {
@@ -43,6 +46,18 @@ public class BaseTests {
         WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(pageLoadCondition);
     }
+
+    //Create object of SimpleDateFormat class and decide the format (can also include time ->  "HH:mm:ss")
+    DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy");
+    //get current date with Date()
+    Date date = new Date();
+    //Make the date a string to type out.
+    public String todaysDate = dateFormat.format(date);
+
+    //Date and Time format
+    DateFormat dateAndTimeFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+    Date dateAndTime = new Date();
+    public String todaysDateAndTime = dateAndTimeFormat.format(dateAndTime);
 
     @BeforeClass
     public void setUp() {

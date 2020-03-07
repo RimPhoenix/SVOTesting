@@ -8,7 +8,7 @@ import pages.LoginPage;
 import static org.testng.Assert.assertEquals;
 
 
-public class CreateTests extends BaseTests {
+public class CreateUsersTests extends BaseTests {
 
 
     @Test

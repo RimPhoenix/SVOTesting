@@ -11,7 +11,7 @@ import pages.AddNewPatientPage;
 import pages.LoginPage;
 import pages.PatientsPage;
 
-public class CreatePatient extends BaseTests {
+public class CreatePatientTests extends BaseTests {
 
     @Test
 
@@ -27,6 +27,10 @@ public class CreatePatient extends BaseTests {
         patientsPage.setLastNameField("Patient" + Keys.ENTER);
         patientsPage.setNewPrescritpion();
         patientsPage.setDoctorSelect();
-        patientsPage.setDoctorSelectField();
+        patientsPage.setDoctorSelectField("sam" + Keys.ENTER);
+        patientsPage.selectRxType("distance_only");
+        patientsPage.setPrescribedDate(todaysDate);
+        patientsPage.setOdSphPrescription("1.25");
+        patientsPage.setOsSphPrescription("-3.5");
     }
 }
