@@ -79,5 +79,13 @@ public class PatientsPage {
     private By osSphPrescription = By.id("os_sph_prescription-new");
     public void setOsSphPrescription(String osSph){driver.findElement(osSphPrescription).sendKeys(osSph);}
 
+    private By fpdOdPrescription = By.id("fpd_od_prescription-new");
+    public void setFpdOdPrescription(String fpdOd){driver.findElement(fpdOdPrescription).sendKeys(fpdOd);}
+
+    private By fpdOsPrescription = By.id("fpd_os_prescription-new");
+    public void setFpdOsPrescription(String fpdOs){driver.findElement(fpdOsPrescription).sendKeys(fpdOs);}
+
+    private By creatBtn = By.name("commit");
+    public void setCreatBtn(){driver.findElement(creatBtn).click();}
 
 }

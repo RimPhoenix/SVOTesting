@@ -32,5 +32,8 @@ public class CreatePatientTests extends BaseTests {
         patientsPage.setPrescribedDate(todaysDate);
         patientsPage.setOdSphPrescription("1.25");
         patientsPage.setOsSphPrescription("-3.5");
+        patientsPage.setFpdOdPrescription("23");
+        patientsPage.setFpdOsPrescription("25");
+        //patientsPage.setCreatBtn(); //creates rx
     }
 }
