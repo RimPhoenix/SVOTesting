@@ -119,6 +119,12 @@ public class AddNewUserPage {
         driver.findElement(userSearchField).sendKeys(userID);
     }
 
+    private By idAddBtn = By.xpath("//button[@class='btn btn-outline-primary']");
+    public void clickIdAddBtn(){driver.findElement(idAddBtn).click();}
+
+
+
+
 
 
 }

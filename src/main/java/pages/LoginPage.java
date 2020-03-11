@@ -10,7 +10,10 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.Constants;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage {
@@ -18,10 +21,19 @@ public class LoginPage {
     private static void printLoggedInMessage(String loggedInAs){
             System.out.println("You are logged in as " + loggedInAs);
         }
-
+    //Date and Time used for Login purposes
+    static DateFormat dateAndTimeForLoginFormat = new SimpleDateFormat("YYMMddmm");
+    static Date dateAndTimeForLogin = new Date();
+    public static String loginDateAndTime = dateAndTimeForLoginFormat.format(dateAndTimeForLogin);
     public LoginPage(EventFiringWebDriver driver) {
         LoginPage.driver = driver;
     }
+
+
+    public static String mngLogin = (Constants.TestManagerID + loginDateAndTime);
+    public static String empLogin = (Constants.TestEmployeeID + loginDateAndTime);
+
+
 
     //public void login(String userName, String passWord){        }
     public static void adminLogin() {
@@ -49,6 +61,7 @@ public class LoginPage {
 
         printLoggedInMessage("Admin");
         driver.findElement(By.xpath("//a[@href='/access/profile' and text()='Robbie Moritz']"));
+
     }
 
     public static void managerLogin() {
@@ -195,7 +208,8 @@ public class LoginPage {
     public static void testManagerLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
-        idBox.sendKeys(Constants.TestManagerID);
+        //idBox.sendKeys(Constants.TestManagerID + loginDateAndTime);
+        idBox.sendKeys(mngLogin);
 
         WebElement pwBox = driver.findElement(By.name("password"));
         pwBox.click();
@@ -205,11 +219,13 @@ public class LoginPage {
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Manager TestCreated']")));
         printLoggedInMessage("Manager TestCreated");
+
     }
     public static void level1TestEmployeeLogin() {
         WebElement idBox = driver.findElement(By.name("id"));
         idBox.click();
-        idBox.sendKeys(Constants.TestEmployeeID);
+        //idBox.sendKeys(Constants.TestEmployeeID + empLogin);
+        idBox.sendKeys();
 
         WebElement pwBox = driver.findElement(By.name("password"));
         pwBox.click();
@@ -217,8 +233,9 @@ public class LoginPage {
         WebElement loginButton = driver.findElement(By.name("button"));
         loginButton.click();
         WebDriverWait wait = new WebDriverWait(driver, 5);
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Employee TestByManager']")));
+        wait. until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Employee TestByManager']")));
         printLoggedInMessage("Employee TestByManager");
+
 
     }
 

@@ -20,9 +20,9 @@ public interface Constants {
     String SuccessHoldingsStaffPW = "shspassword";
     String HomeOfficeStaffID = "1118";
     String HomeOfficeStaffPW = "hospassword";
-    String TestManagerID = "1121";
+    String TestManagerID = "";
     String TestManagerPW = "testmanager";
-    String TestEmployeeID = "1130";
+    String TestEmployeeID = "1";
     String TestEmployeePW = "testemployee";
 
 }

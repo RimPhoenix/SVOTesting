@@ -2,13 +2,16 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 
@@ -33,7 +36,7 @@ public class PatientsPage {
     //Creating a patient
 
 
-    public void setCloseBtn(){WebDriverWait wait = new WebDriverWait(driver, 2);
+    public void setCloseBtn(){WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
         driver.findElement(closeBtn).click();
     }
@@ -87,5 +90,42 @@ public class PatientsPage {
 
     private By creatBtn = By.name("commit");
     public void setCreatBtn(){driver.findElement(creatBtn).click();}
+
+    private By clickSearchBtn = By.xpath("//main[@class='container-fluid']//button[1]");
+    public void setClickSearchBtn(){driver.findElement(clickSearchBtn).click();}
+
+    private By searchField = By.xpath("//label[contains(text(),'Search:')]//input");
+    public void setSearchField(String patient){
+        FluentWait wait = new FluentWait(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(searchField)));
+        driver.findElement(searchField).sendKeys(patient);}
+
+    private By desiredPatient = By.xpath("//tr[@id='dt-patient_100473']");
+    public void setDesiredPatient(){
+        WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.elementToBeClickable(desiredPatient));
+        driver.findElement(desiredPatient).click();
+    }
+
+    private By newOrderBtn = By.xpath("//main[@class='container-fluid']//a[2]");
+    public void setNewOrderBtn(){driver.findElement(newOrderBtn).click();}
+
+    private By addJobBtn = By.xpath("//a[contains(text(),'Add Job')]");
+    public void setAddJobBtn(){WebDriverWait wait = new WebDriverWait(driver, 4);
+        wait.until(ExpectedConditions.elementToBeClickable(addJobBtn));
+        driver.findElement(addJobBtn).click();}
+
+    private By clickRx = By.id("select2-job_rx_id--container");
+    public void setClickRx(){WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.elementToBeClickable(clickRx));driver.findElement(clickRx).click();}
+
+    private By chooseRx = By.xpath("//input[@class='select2-search__field']");
+    public void setChooseRx(String rx){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(chooseRx));driver.findElement(chooseRx).sendKeys(rx);}
+
+
 
 }

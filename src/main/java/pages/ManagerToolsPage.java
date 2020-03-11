@@ -17,6 +17,11 @@ public class ManagerToolsPage {
 
 
     public UsersPage clickUsers() {
+        try {
+            Thread.sleep(300);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         clickLink();
         return new UsersPage(driver);
     }

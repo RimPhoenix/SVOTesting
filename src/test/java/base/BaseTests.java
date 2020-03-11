@@ -59,6 +59,11 @@ public class BaseTests {
     Date dateAndTime = new Date();
     public String todaysDateAndTime = dateAndTimeFormat.format(dateAndTime);
 
+    //Date and Time used for Login purposes
+    DateFormat dateAndTimeForLoginFormat = new SimpleDateFormat("YYMMddHHmmss");
+    Date dateAndTimeForLogin = new Date();
+    public String loginDateAndTime = dateAndTimeForLoginFormat.format(dateAndTimeForLogin);
+
     @BeforeClass
     public void setUp() {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
