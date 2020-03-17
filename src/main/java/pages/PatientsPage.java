@@ -1,18 +1,12 @@
 package pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 
 
 public class PatientsPage {
@@ -36,7 +30,7 @@ public class PatientsPage {
     //Creating a patient
 
 
-    public void setCloseBtn(){WebDriverWait wait = new WebDriverWait(driver, 3);
+    public void setCloseBtn(){WebDriverWait wait = new WebDriverWait(driver, 4);
         wait.until(ExpectedConditions.elementToBeClickable(closeBtn));
         driver.findElement(closeBtn).click();
     }
@@ -92,7 +86,9 @@ public class PatientsPage {
     public void setCreatBtn(){driver.findElement(creatBtn).click();}
 
     private By clickSearchBtn = By.xpath("//main[@class='container-fluid']//button[1]");
-    public void setClickSearchBtn(){driver.findElement(clickSearchBtn).click();}
+    public void setClickSearchBtn(){WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.elementToBeClickable(clickSearchBtn));
+        driver.findElement(clickSearchBtn).click();}
 
     private By searchField = By.xpath("//label[contains(text(),'Search:')]//input");
     public void setSearchField(String patient){
@@ -122,10 +118,75 @@ public class PatientsPage {
     public void setClickRx(){WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.elementToBeClickable(clickRx));driver.findElement(clickRx).click();}
 
-    private By chooseRx = By.xpath("//input[@class='select2-search__field']");
-    public void setChooseRx(String rx){WebDriverWait wait = new WebDriverWait(driver, 2);
-        wait.until(ExpectedConditions.presenceOfElementLocated(chooseRx));driver.findElement(chooseRx).sendKeys(rx);}
+    private By chooseRx = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
+    public void setChooseRx(String rx){
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(chooseRx));
+        driver.findElement(chooseRx).sendKeys(rx);}
+
+    private By timePromised = By.xpath("//button[contains(text(),'1')]");
+    public void setTimePromised(){driver.findElement(timePromised).click();}
+
+    private By frameChoice = By.id("select2-job_frame_sku--container");
+    public void setFrameChoice(){driver.findElement(frameChoice).click();}
+
+    private By frameSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
+    public void setFrameSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(frameSelect));driver.findElement(frameSelect).sendKeys(choice); }
+
+    private By odChoice = By.id("select2-job_lens_od_sku--container");
+    public void setOdChoice(){driver.findElement(odChoice).click();}
+
+    private By odSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
+    public void setOdSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(odSelect));driver.findElement(odSelect).sendKeys(choice);}
+
+    private By osChoice = By.id("select2-job_lens_os_sku--container");
+    public void setOsChoice(){driver.findElement(osChoice).click();}
+
+    private By osSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
+    public void setOsSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(osSelect));driver.findElement(osSelect).sendKeys(choice);}
+
+    private By trayNumber = By.id("tray_number-");
+    public void setTrayNumber(String tray){driver.findElement(trayNumber).sendKeys(tray);}
+
+    private By segHeight = By.id("seg_h_measurement-");
+    public void setSegHeight(String segH){driver.findElement(segHeight).sendKeys(segH);}
+
+    private By addOns = By.xpath("//ul[@class='select2-selection__rendered']");
+    public void setAddOns(){driver.findElement(addOns).click();}
+
+    private By addOnsChoice = By.xpath("//li[contains(text(),'none')]");
+    public void setAddOnsChoice(){driver.findElement(addOnsChoice).click();}
+
+    private By notes = By.id("notes_job-new");
+    public void setNotes(String note){driver.findElement(notes).sendKeys(note);}
+
+    private By internalNotes = By.id("internal_notes_job-new");
+    public void setInternalNotes(String internalNote){driver.findElement(internalNotes).sendKeys(internalNote);}
+
+    private By createOrderBtn = By.xpath("//input[@value='Create']");
+    public void setCreateOrderBtn(){driver.findElement(createOrderBtn).click();}
+
+    private By paymentType = By.id("payment_type_payment-new");
+    private Select findPaymentType(){return new Select(driver.findElement(paymentType));}
+    public void selectFromPaymentType(String option) {findPaymentType().selectByValue(option);}
+
+    private By total = By.xpath("//span[@class='total']");
+    public String setTotal(){return (driver.findElement(total).getText());}
+
+    private By paymentField = By.id("payment_amount-payment-new");
+    public void setPaymentField(String amt){driver.findElement(paymentField).sendKeys(amt);}
+
+    private By totalBtn = By.xpath("//div[@class='col-sm']//span[@class='input-group-text clickable']");
+    public void setTotalBtn(){driver.findElement(totalBtn).click();}
+
+    private By addPaymentBtn = By.xpath("//input[@value='Add Payment']");
+    public void setAddPaymentBtn(){driver.findElement(addPaymentBtn).click();}
 
 
 
-}
+    }
+
+

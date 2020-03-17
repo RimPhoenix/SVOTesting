@@ -3,8 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import java.awt.*;
-
 public class HomePage {
 
     private WebDriver driver;
@@ -14,8 +12,7 @@ public class HomePage {
     }
 
     private By clockInBtn = By.xpath("//div[@class='d-lg-block d-none']//input[@name='commit']");
-    private By confirmClockIn = By.xpath("//h3[@class='clocked-in-header']");
-    private By confirmClockOut = By.xpath("//h3[@class='h5 clocked-in-header']");
+    private By confirmClockIn_Out = By.xpath("//h3[@class='clocked-in-header']");
 
     private void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
@@ -25,12 +22,8 @@ public class HomePage {
         driver.findElement(clockInBtn).click();
     }
 
-    public String setConfirmClockIn() {
-        return driver.findElement(confirmClockIn).getText();
-    }
-
-    public String setConfirmClockOut() {
-        return driver.findElement(confirmClockOut).getText();
+    public String setConfirmClockIn_Out() {
+        return driver.findElement(confirmClockIn_Out).getText();
     }
 
     public PatientsPage clickPatients() {
