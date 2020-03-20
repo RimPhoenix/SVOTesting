@@ -185,8 +185,45 @@ public class PatientsPage {
     private By addPaymentBtn = By.xpath("//input[@value='Add Payment']");
     public void setAddPaymentBtn(){driver.findElement(addPaymentBtn).click();}
 
+    private By paidInFull = By.xpath("//img[@class='paid-in-full d-none d-md-inline']");
+    public void setPaidInFull(){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(paidInFull));driver.findElement(paidInFull).isDisplayed();}
+
+    private By submitToLabBtn = By.xpath("//div[@class='add-to-order']//button[1]");
+    public void setSubmitToLabBtn(){driver.findElement(submitToLabBtn).click();}
 
 
+    // *****************************Insurance Policy Section******************************
+
+    private By addPolicyBtn = By.xpath("//button[contains(text(),'Add Policy')]");
+    public void setAddPolicyBtn(){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.elementToBeClickable(addPolicyBtn));
+        driver.findElement(addPolicyBtn).click();}
+
+    private By insurer = By.id("add-insurance-policy-modal__insurer_insurance_policy-new");
+    private Select findInsurer(){return new Select(driver.findElement(insurer));}
+    public void selectInsurer(String option){WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.elementToBeClickable(insurer));
+        findInsurer().selectByValue(option); //value 1-9 would work
     }
+
+    private By memberIdField = By.id("add-insurance-policy-modal__member-id_insurance_policy-new");
+    public void setMemberIdField(String memberId){driver.findElement(memberIdField).sendKeys(memberId);}
+
+    private By authorizationNbrField = By.id("add-insurance-policy-modal__authorization-number_insurance_policy-new");
+    public void setAuthorizationNbrField(String authorizationNbr){driver.findElement(authorizationNbrField).sendKeys(authorizationNbr);}
+
+    private By ssnEndingField = By.id("add-insurance-policy-modal__ssn-ending_insurance_policy-new");
+    public void setSsnEndingField(String ssnEnding){driver.findElement(ssnEndingField).sendKeys(ssnEnding);}
+
+    private By frameAllowanceField = By.id("add-insurance-policy-modal__frame-allowance_insurance_policy-new");
+    public void setFrameAllowanceField(String frameAllowance){driver.findElement(frameAllowanceField).sendKeys(frameAllowance);}
+
+    private By coPayField = By.id("add-insurance-policy-modal__materials-copay_insurance_policy-new");
+    public void setCoPayField(String copay){driver.findElement(coPayField).sendKeys(copay);}
+
+    private By submitAddInsurancePolicyBtn = By.xpath("//form[@id='new_insurance_policy-add-modal']//input[@name='commit']");
+    public void setSubmitAddInsurancePolicyBtn(){driver.findElement(submitAddInsurancePolicyBtn).click();}
+}
 
 

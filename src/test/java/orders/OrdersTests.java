@@ -13,4 +13,6 @@ public class OrdersTests extends BaseTests {
         LoginPage.adminLogin();
         var ordersPage = homePage.clickOrders();
     }
+
+
 }

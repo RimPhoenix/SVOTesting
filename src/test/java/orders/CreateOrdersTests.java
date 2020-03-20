@@ -37,13 +37,13 @@ public class CreateOrdersTests extends BaseTests {
         patientsPage.setAddJobBtn();
         patientsPage.setClickRx();
         patientsPage.setChooseRx("03" + Keys.ENTER);
-        patientsPage.setTimePromised();
+         patientsPage.setTimePromised();
 
         patientsPage.setOdChoice();
         patientsPage.setOdSelect("113" + Keys.ENTER);
         patientsPage.setOsChoice();
         patientsPage.setOsSelect("101" + Keys.ENTER);
-        patientsPage.setTrayNumber("1");
+        patientsPage.setTrayNumber("7");
         patientsPage.setSegHeight("10");
         patientsPage.setAddOns();
         patientsPage.setAddOnsChoice();
@@ -60,6 +60,8 @@ public class CreateOrdersTests extends BaseTests {
         patientsPage.selectFromPaymentType("cash");
         patientsPage.setTotalBtn();
         patientsPage.setAddPaymentBtn();
+        patientsPage.setPaidInFull();
+        patientsPage.setSubmitToLabBtn();
         //String totalAmt = patientsPage.setTotal();
         //patientsPage.setPaymentField(totalAmt);
 
