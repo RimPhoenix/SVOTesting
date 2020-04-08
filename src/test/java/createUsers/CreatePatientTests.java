@@ -11,6 +11,8 @@ import pages.AddNewPatientPage;
 import pages.LoginPage;
 import pages.PatientsPage;
 
+import static org.testng.Assert.assertEquals;
+
 public class CreatePatientTests extends BaseTests {
 
     @Test
@@ -20,6 +22,9 @@ public class CreatePatientTests extends BaseTests {
         LoginPage.level1EmployeeLogin();//change later to testEmployee
         PatientsPage patientsPage = homePage.clickPatients();
         patientsPage.setCloseBtn();
+        waitForLoad(driver);
+        System.out.println(driver.getTitle());
+        assertEquals(driver.getTitle(), "SVO Patients", "Title did not match");
         patientsPage.setAddNewPatientBtn();
         // Creating a patient
         patientsPage.setDeclineEmail();
