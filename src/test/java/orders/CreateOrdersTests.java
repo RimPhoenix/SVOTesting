@@ -43,7 +43,7 @@ public class CreateOrdersTests extends BaseTests {
         patientsPage.setOdSelect("113" + Keys.ENTER);
         patientsPage.setOsChoice();
         patientsPage.setOsSelect("101" + Keys.ENTER);
-        patientsPage.setTrayNumber("7");
+        patientsPage.setTrayNumber("16");
         patientsPage.setSegHeight("10");
         patientsPage.setAddOns();
         patientsPage.setAddOnsChoice();

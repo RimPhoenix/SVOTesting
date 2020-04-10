@@ -114,8 +114,8 @@ public class PatientsPage {
         wait.until(ExpectedConditions.elementToBeClickable(addJobBtn));
         driver.findElement(addJobBtn).click();}
 
-    private By clickRx = By.id("select2-job_rx_id--container");
-    public void setClickRx(){WebDriverWait wait = new WebDriverWait(driver, 3);
+    private By clickRx = By.xpath("//span[@id='select2-job_rx_id-job-new-container']");
+    public void setClickRx(){WebDriverWait wait = new WebDriverWait(driver, 4);
         wait.until(ExpectedConditions.elementToBeClickable(clickRx));driver.findElement(clickRx).click();}
 
     private By chooseRx = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
@@ -127,43 +127,43 @@ public class PatientsPage {
     private By timePromised = By.xpath("//button[contains(text(),'1')]");
     public void setTimePromised(){driver.findElement(timePromised).click();}
 
-    private By frameChoice = By.id("select2-job_frame_sku--container");
+    private By frameChoice = By.xpath("//span[@id='select2-job_frame_sku-job-new-container']");
     public void setFrameChoice(){driver.findElement(frameChoice).click();}
 
     private By frameSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
     public void setFrameSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(frameSelect));driver.findElement(frameSelect).sendKeys(choice); }
 
-    private By odChoice = By.id("select2-job_lens_od_sku--container");
+    private By odChoice = By.xpath("//span[@id='select2-job_lens_od_sku-job-new-container']");
     public void setOdChoice(){driver.findElement(odChoice).click();}
 
     private By odSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
     public void setOdSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(odSelect));driver.findElement(odSelect).sendKeys(choice);}
 
-    private By osChoice = By.id("select2-job_lens_os_sku--container");
+    private By osChoice = By.xpath("//span[@id='select2-job_lens_os_sku-job-new-container']");
     public void setOsChoice(){driver.findElement(osChoice).click();}
 
     private By osSelect = By.xpath("//span[@class='select2-search select2-search--dropdown']//input[@class='select2-search__field']");
     public void setOsSelect(String choice){WebDriverWait wait = new WebDriverWait(driver, 2);
         wait.until(ExpectedConditions.presenceOfElementLocated(osSelect));driver.findElement(osSelect).sendKeys(choice);}
 
-    private By trayNumber = By.id("tray_number-");
+    private By trayNumber = By.xpath("//input[@id='tray_number-job-new']");
     public void setTrayNumber(String tray){driver.findElement(trayNumber).sendKeys(tray);}
 
-    private By segHeight = By.id("seg_h_measurement-");
+    private By segHeight = By.xpath("//input[@id='seg_h_measurement-job-new']");
     public void setSegHeight(String segH){driver.findElement(segHeight).sendKeys(segH);}
 
-    private By addOns = By.xpath("//ul[@class='select2-selection__rendered']");
+    private By addOns = By.xpath("//ul[contains(@class,'select2-selection__rendered')]");
     public void setAddOns(){driver.findElement(addOns).click();}
 
-    private By addOnsChoice = By.xpath("//li[contains(text(),'none')]");
+    private By addOnsChoice = By.className("select2-results__option");
     public void setAddOnsChoice(){driver.findElement(addOnsChoice).click();}
 
-    private By notes = By.id("notes_job-new");
+    private By notes = By.xpath("//textarea[@id='notes_job-new']");
     public void setNotes(String note){driver.findElement(notes).sendKeys(note);}
 
-    private By internalNotes = By.id("internal_notes_job-new");
+    private By internalNotes = By.xpath("//textarea[@id='internal_notes_job-new']");
     public void setInternalNotes(String internalNote){driver.findElement(internalNotes).sendKeys(internalNote);}
 
     private By createOrderBtn = By.xpath("//input[@value='Create']");
