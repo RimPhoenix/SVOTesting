@@ -10,6 +10,8 @@ import pages.AddNewUserPage;
 import pages.LoginPage;
 import utils.Constants;
 
+import java.util.Collections;
+
 import static org.testng.Assert.assertEquals;
 
 
@@ -32,6 +34,7 @@ public class CreateUsersTests extends BaseTests {
     public void createManager() {
         LoginPage.adminLogin();
         AddNewUserPage addNewUserPage = homePage.clickManagerTools().clickUsers().clickAddNewUser();
+        assertEquals(addNewUserPage.getTitle(), "SVO Users", "Title did not match");
         addNewUserPage.setFirstNameField("Manager");
         addNewUserPage.setLastNameField("TestCreated");
         //addNewUserPage.setIdField("MngTest"+loginDateAndTime);

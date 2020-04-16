@@ -21,6 +21,11 @@ public class CreatePatientTests extends BaseTests {
 
         LoginPage.level1EmployeeLogin();//change later to testEmployee
         PatientsPage patientsPage = homePage.clickPatients();
+        try {
+            Thread.sleep(100);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         patientsPage.setCloseBtn();
         waitForLoad(driver);
         System.out.println(driver.getTitle());
@@ -32,13 +37,15 @@ public class CreatePatientTests extends BaseTests {
         patientsPage.setLastNameField("Patient" + Keys.ENTER);
         patientsPage.setNewPrescritpion();
         patientsPage.setDoctorSelect();
-        patientsPage.setDoctorSelectField("sam" + Keys.ENTER);
+        patientsPage.setDoctorSelectField("SamuelPresley" + Keys.ENTER);
         patientsPage.selectRxType("distance_only");
         patientsPage.setPrescribedDate(todaysDate);
         patientsPage.setOdSphPrescription("1.25");
         patientsPage.setOsSphPrescription("-3.5");
         patientsPage.setFpdOdPrescription("23");
         patientsPage.setFpdOsPrescription("25");
+        patientsPage.setRxNotes("Rx Notes");
+        patientsPage.setDoctorSelectField(""+Keys.ARROW_DOWN + Keys.ENTER);
         patientsPage.setCreatBtn(); //creates rx
     }
 }

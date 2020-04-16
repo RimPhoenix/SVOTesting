@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/Student/IdeaProjects/SVOTesting/src/test/java/patients/PatientsTests.java">
+        <!-- Your can write 'parallel' after suite and test to have multiple tests run at the same time -->
+        <classes>
+            <class name="patients.PatientsTests">
+                <methods>
+                    <exclude name="searchForBob"/>
+                    <include name="addInsurancePolicy"/>
+                </methods>
+            </class>
+            <class name="createUsers.CreatePatientTests">
+                <methods>
+                    <include name="createPatient"/>
+                </methods>
+            </class>
+            <class name="createUsers.CreateUsersTests">
+                <methods>
+                    <exclude name="clickAddNewUser"/>
+                    <include name="createManager"/>
+                    <exclude name="deleteManager"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

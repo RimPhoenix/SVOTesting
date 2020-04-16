@@ -82,7 +82,10 @@ public class PatientsPage {
     private By fpdOsPrescription = By.id("fpd_os_prescription-new");
     public void setFpdOsPrescription(String fpdOs){driver.findElement(fpdOsPrescription).sendKeys(fpdOs);}
 
-    private By creatBtn = By.name("commit");
+    private By rxNotesArea = By.xpath("//textarea[@id='new_notes-prescription-new']");
+    public void setRxNotes(String rxNotes){driver.findElement(rxNotesArea).sendKeys(rxNotes);}
+
+    private By creatBtn = By.xpath("//form[@id='new_prescription']//input[@name='commit']");
     public void setCreatBtn(){driver.findElement(creatBtn).click();}
 
     private By clickSearchBtn = By.xpath("//main[@class='container-fluid']//button[1]");
