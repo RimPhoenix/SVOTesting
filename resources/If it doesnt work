@@ -1,0 +1,9 @@
+
+
+If chromedriver.exe doesn't work you have to make sure the version you have matches the version you are trying to control
+
+go to the chrome menu, then click on help >, then About Google Chrome, to see which version of chrome you have.
+
+Go to http://chromedriver.chromium.org/downloads to download the chrome driver that matches
+
+Replace the chomedriver.exe file with the newer one
