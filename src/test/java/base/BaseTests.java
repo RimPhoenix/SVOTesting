@@ -33,6 +33,16 @@ public class BaseTests {
     protected HomePage homePage;
     protected ManagerToolsPage managerToolsPage;
     protected LoginPage loginPage;
+    public static String os = System.getProperty("os.name").toLowerCase();
+    public static boolean isWindows(){
+        return os.contains("win");
+    }
+    public static boolean isMac(){
+        return os.contains("mac");
+    }
+    public static boolean isUnix(){
+        return os.contains("nix") || os.contains("nux") || os.contains("aix");
+    }
 
 
     public void waitForLoad(WebDriver driver) {
@@ -65,11 +75,27 @@ public class BaseTests {
     public String loginDateAndTime = dateAndTimeForLoginFormat.format(dateAndTimeForLogin);
 
     @BeforeClass
+
+
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
-        driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
-        driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
-        loginPage = new LoginPage(driver);
+        if (isWindows()) {
+            System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+            driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+            driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
+            loginPage = new LoginPage(driver);
+        } else if (isMac()){
+            System.setProperty("webdriver.chrome.driver", "resources/chromedriverMac");
+            driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+            driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
+            loginPage = new LoginPage(driver);
+        } else if (isUnix()){
+            System.setProperty("webdriver.chrome.driver", "resources/chromedriverLinux");
+            driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
+            driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
+            loginPage = new LoginPage(driver);
+        } else {
+            System.out.println("Your OS is not supported");
+        }
         //driver.manage().window().maximize();
 
         //****Before any test can be run, make sure you Login with the account you want from the LoginPage
