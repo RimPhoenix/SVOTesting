@@ -79,17 +79,17 @@ public class BaseTests {
 
     public void setUp() {
         if (isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "resources/Windows/chromedriver.exe");
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
         } else if (isMac()){
-            System.setProperty("webdriver.chrome.driver", "resources/chromedriverMac");
+            System.setProperty("webdriver.chrome.driver", "resources/Mac/chromedriver");
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
         } else if (isUnix()){
-            System.setProperty("webdriver.chrome.driver", "resources/chromedriverLinux");
+            System.setProperty("webdriver.chrome.driver", "resources/Linux/chromedriver");
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
