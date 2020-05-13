@@ -35,6 +35,7 @@ public class CreateUsersTests extends BaseTests {
         LoginPage.adminLogin();
         AddNewUserPage addNewUserPage = homePage.clickManagerTools().clickUsers().clickAddNewUser();
         assertEquals(addNewUserPage.getTitle(), "SVO Users", "Title did not match");
+        System.out.println("Create a Manager");
         addNewUserPage.setFirstNameField("Manager");
         addNewUserPage.setLastNameField("TestCreated");
         //addNewUserPage.setIdField("MngTest"+loginDateAndTime);
@@ -46,6 +47,7 @@ public class CreateUsersTests extends BaseTests {
         addNewUserPage.setPwField(Constants.TestManagerPW);
         addNewUserPage.setDeclineEmail();
         addNewUserPage.setSubmitBtn();
+        System.out.println("Create roles for the manager");
         addNewUserPage.setRolesPage();
         addNewUserPage.setNewRoleBtn();
         addNewUserPage.setNewRoleField();
@@ -58,6 +60,7 @@ public class CreateUsersTests extends BaseTests {
             LoginPage.testManagerLogin();
 
         homePage.clickManagerTools().clickUsers().clickAddNewUser();
+        System.out.println("Create a level 1 Employee");
         addNewUserPage.setFirstNameField("Employee");
         addNewUserPage.setLastNameField("TestByManager");
         addNewUserPage.clickIdAddBtn();

@@ -7,6 +7,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -80,16 +81,28 @@ public class BaseTests {
     public void setUp() {
         if (isWindows()) {
             System.setProperty("webdriver.chrome.driver", "resources/Windows/chromedriver.exe");
+//            ChromeDriverService service = new ChromeDriverService.Builder()
+//                    .usingDriverExecutable(new File("resources/Windows/chromedriver"))
+//                    .usingAnyFreePort()
+//                    .build();
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
         } else if (isMac()){
             System.setProperty("webdriver.chrome.driver", "resources/Mac/chromedriver");
+//            ChromeDriverService service = new ChromeDriverService.Builder()
+//                    .usingDriverExecutable(new File("resources/Mac/chromedriver"))
+//                    .usingAnyFreePort()
+//                    .build();
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
         } else if (isUnix()){
             System.setProperty("webdriver.chrome.driver", "resources/Linux/chromedriver");
+//            ChromeDriverService service = new ChromeDriverService.Builder()
+//                    .usingDriverExecutable(new File("resources/Linux/chromedriver"))
+//                    .usingAnyFreePort()
+//                    .build();
             driver = new EventFiringWebDriver(new ChromeDriver(getChromeOptions()));
             driver.get("http://www.svo.sh/access/login?url=http%3A%2F%2Fwww.svo.sh%2Faccess%2Fhome");
             loginPage = new LoginPage(driver);
