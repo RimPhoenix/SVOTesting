@@ -23,6 +23,12 @@
                     <exclude name="deleteManager"/>
                 </methods>
             </class>
+            <class name="inventory.InventoryTests">
+                <methods>
+                    <exclude name="clickInventory"/>
+                    <include name="inventoryCycle"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
