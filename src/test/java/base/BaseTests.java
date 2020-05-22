@@ -75,6 +75,11 @@ public class BaseTests {
     Date dateAndTimeForLogin = new Date();
     public String loginDateAndTime = dateAndTimeForLoginFormat.format(dateAndTimeForLogin);
 
+    //Date and Time for Tracking Number purposes
+    DateFormat dateAndTimeForTrackingNumberFormat = new SimpleDateFormat("YYHHmmss");
+    Date dateAndTimeForTrackingNumber = new Date();
+    public String trackingNumberDandT = dateAndTimeForTrackingNumberFormat.format(dateAndTimeForTrackingNumber);
+
     @BeforeClass
 
 

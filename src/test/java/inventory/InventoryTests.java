@@ -1,19 +1,12 @@
 package inventory;
 
 import base.BaseTests;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import pages.InventoryPage;
 import pages.LoginPage;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
+
 
 
 public class InventoryTests extends BaseTests {
@@ -28,7 +21,7 @@ public class InventoryTests extends BaseTests {
     }
 
     @Test
-    public void inventoryCycle() throws InterruptedException {
+    public void inventoryCycle() {
         loginPage.adminLogin();
         InventoryPage inventoryPage = homePage.clickInventory();
         System.out.println(inventoryPage.getTitle());

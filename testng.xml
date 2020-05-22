@@ -29,6 +29,11 @@
                     <include name="inventoryCycle"/>
                 </methods>
             </class>
+            <class name="incomingShipments.IncomingShipmentsTests">
+                <methods>
+                    <include name="packingSlips()"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>

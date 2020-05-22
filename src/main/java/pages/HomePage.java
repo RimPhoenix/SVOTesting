@@ -71,5 +71,10 @@ public class HomePage {
         return new ManagerToolsPage(driver);
     }
 
+    public IncomingShipmentsPage clickIncomingShipments() {
+        clickLink("Incoming Shipments");
+        return new IncomingShipmentsPage(driver);
+    }
+
 
 }
