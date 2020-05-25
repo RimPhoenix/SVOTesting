@@ -35,6 +35,7 @@ public class CreatePatientTests extends BaseTests {
         patientsPage.setDeclineEmail();
         patientsPage.setFirstNameField("Test" + loginDateAndTime);
         patientsPage.setLastNameField("Patient" + Keys.ENTER);
+        System.out.println("Created patient First and last Name ");
         patientsPage.setNewPrescritpion();
         patientsPage.setDoctorSelect();
         patientsPage.setDoctorSelectField("SamuelPresley" + Keys.ENTER);
@@ -44,6 +45,7 @@ public class CreatePatientTests extends BaseTests {
         patientsPage.setOsSphPrescription("-3.5");
         patientsPage.setFpdOdPrescription("23");
         patientsPage.setFpdOsPrescription("25");
+        System.out.println("created patients Rx");
         patientsPage.setRxNotes("Rx Notes");
         patientsPage.setDoctorSelectField(""+Keys.ARROW_DOWN + Keys.ENTER);
         patientsPage.setCreatBtn(); //creates rx
