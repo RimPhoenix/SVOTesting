@@ -31,7 +31,8 @@
             </class>
             <class name="incomingShipments.IncomingShipmentsTests">
                 <methods>
-                    <include name="packingSlips()"/>
+                    <exclude name="packingSlips"/>
+                    <include name="packingSlipsForTerminal"/>
                 </methods>
             </class>
         </classes>
