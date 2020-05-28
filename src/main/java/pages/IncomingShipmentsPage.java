@@ -74,7 +74,7 @@ public class IncomingShipmentsPage {
 
     public void setAddLineItemBtn() {driver.findElement(addLineItemBtn).click();}
 
-    public String LineItemProduct1Text() {WebDriverWait wait = new WebDriverWait(driver, 2);
+    public String LineItemProduct1Text() {WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.presenceOfElementLocated(lineItemProduct1));
         return driver.findElement(lineItemProduct1).getText();}
 

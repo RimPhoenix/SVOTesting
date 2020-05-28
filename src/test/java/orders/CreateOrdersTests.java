@@ -15,7 +15,7 @@ public class CreateOrdersTests extends BaseTests {
     @Test
 
     public void createNewOrder(){
-
+        int trayNumber = (17);
         LoginPage.level1EmployeeLogin();
         switch (homePage.setConfirmClockIn_Out()) {
             case "On The Clock":
@@ -43,14 +43,14 @@ public class CreateOrdersTests extends BaseTests {
         patientsPage.setOdSelect("113" + Keys.ENTER);
         patientsPage.setOsChoice();
         patientsPage.setOsSelect("101" + Keys.ENTER);
-        patientsPage.setTrayNumber("16");
+        patientsPage.setTrayNumber("20");
         patientsPage.setSegHeight("10");
         patientsPage.setAddOns();
         patientsPage.setAddOnsChoice();
         patientsPage.setNotes("Here are some notes");
 
         patientsPage.setFrameChoice();
-        patientsPage.setFrameSelect("465050" + Keys.ARROW_DOWN + Keys.ENTER);
+        patientsPage.setFrameSelect("485782" + Keys.ARROW_DOWN + Keys.ENTER);
 
         patientsPage.setInternalNotes("Here is an internal note");
 
@@ -62,15 +62,15 @@ public class CreateOrdersTests extends BaseTests {
         patientsPage.setAddPaymentBtn();
         patientsPage.setPaidInFull();
         patientsPage.setSubmitToLabBtn();
-        //String totalAmt = patientsPage.setTotal();
-        //patientsPage.setPaymentField(totalAmt);
+//        String totalAmt = patientsPage.setTotal();
+//        patientsPage.setPaymentField(totalAmt);
 
 
 
 
 
-
-
+//
+//
 //        Clock Out
 //        homePage.setClockInBtn();
 //        assertEquals(homePage.setConfirmClockIn_Out(), "None Clocked In", "Not confirmed, might still be clocked in");

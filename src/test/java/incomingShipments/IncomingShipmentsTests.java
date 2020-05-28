@@ -23,6 +23,7 @@ public class IncomingShipmentsTests extends BaseTests {
         incomingShipmentsPage.setCreatePackingSlipBtn();
         incomingShipmentsPage.setAddItemBtn();
         incomingShipmentsPage.setItemField();
+        Thread.sleep(20);
         incomingShipmentsPage.setItemSearchField("483125");
         Thread.sleep(20);
         incomingShipmentsPage.setItemSearchField(Keys.ENTER+"");
@@ -75,6 +76,7 @@ public class IncomingShipmentsTests extends BaseTests {
         Thread.sleep(50);
         System.out.println(incomingShipmentsPage.getTitle());
         String deliveryStatus = incomingShipmentsPage.deliveredStatusText();
+        Thread.sleep(50);
         assertEquals(deliveryStatus, "delivered", "Something is not correct, it is not delivered");
         System.out.println("The items status is now: " + deliveryStatus);
     }
@@ -92,6 +94,7 @@ public class IncomingShipmentsTests extends BaseTests {
         incomingShipmentsPage.setCreatePackingSlipBtn();
         incomingShipmentsPage.setAddItemBtn();
         incomingShipmentsPage.setItemField();
+        Thread.sleep(30);
         incomingShipmentsPage.setItemSearchField("483125");
         Thread.sleep(20);
         incomingShipmentsPage.setItemSearchField(Keys.ENTER+"");
@@ -144,6 +147,7 @@ public class IncomingShipmentsTests extends BaseTests {
         Thread.sleep(50);
         System.out.println(incomingShipmentsPage.getTitle());
         String deliveryStatus = incomingShipmentsPage.deliveredStatusText();
+        Thread.sleep(50);
         assertEquals(deliveryStatus, "delivered", "Something is not correct, it is not delivered");
         System.out.println("The items status is now: " + deliveryStatus);
     }

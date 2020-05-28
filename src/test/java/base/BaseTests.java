@@ -13,6 +13,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -167,10 +168,10 @@ public class BaseTests {
         return options;
     }
 
-    //  @AfterClass
-    //  public void tearDown(){
-    //     driver.quit();
-    //  }
+//      @AfterClass
+//      public void tearDown(){
+//         driver.quit();
+//      }
 
 
 }
