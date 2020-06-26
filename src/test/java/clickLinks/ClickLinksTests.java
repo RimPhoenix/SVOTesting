@@ -19,7 +19,7 @@ public class ClickLinksTests extends BaseTests {
     @Test
     public void testURLs() {
         //used in the AccessLevelTests, If you want to run this by it's self add a LoginPage.(any login level you desire) before the checkUrl
-
+        loginPage.storeIPadLogin();
         checkUrl("admin");        //  driver.get(baseUrl + "admin" );        System.out.println(driver.getTitle());
         checkUrl("notes");
         checkUrl("download/1");         //need correct id number
