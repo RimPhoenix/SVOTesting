@@ -33,6 +33,7 @@
                 <methods>
                     <exclude name="packingSlips"/>
                     <include name="packingSlipsForTerminal"/>
+
                 </methods>
             </class>
         </classes>
