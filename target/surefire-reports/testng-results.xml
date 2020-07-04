@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="5" total="10" passed="5" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-05-28T16:39:44 CDT" name="All Test Suite" finished-at="2020-05-28T16:42:42 CDT" duration-ms="177908">
+    <groups>
+    </groups>
+    <test started-at="2020-05-28T16:39:44 CDT" name="C:/Users/Student/IdeaProjects/SVOTesting/src/test/java/patients/PatientsTests.java" finished-at="2020-05-28T16:42:42 CDT" duration-ms="177908">
+      <class name="incomingShipments.IncomingShipmentsTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:06 CDT" name="setUp" finished-at="2020-05-28T16:42:19 CDT" duration-ms="13317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:19 CDT" name="goToLogin" finished-at="2020-05-28T16:42:22 CDT" duration-ms="3219" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:22 CDT" name="packingSlipsForTerminal" finished-at="2020-05-28T16:42:42 CDT" duration-ms="20086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- packingSlipsForTerminal -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:42 CDT" name="recordFailure" finished-at="2020-05-28T16:42:42 CDT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=packingSlipsForTerminal status=SUCCESS method=IncomingShipmentsTests.packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- incomingShipments.IncomingShipmentsTests -->
+      <class name="createUsers.CreateUsersTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:31 CDT" name="setUp" finished-at="2020-05-28T16:40:45 CDT" duration-ms="14003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:45 CDT" name="goToLogin" finished-at="2020-05-28T16:40:45 CDT" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:45 CDT" name="createManager" finished-at="2020-05-28T16:41:07 CDT" duration-ms="21682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createManager -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:41:07 CDT" name="recordFailure" finished-at="2020-05-28T16:41:07 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createManager status=SUCCESS method=CreateUsersTests.createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- createUsers.CreateUsersTests -->
+      <class name="createUsers.CreatePatientTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:13 CDT" name="setUp" finished-at="2020-05-28T16:40:20 CDT" duration-ms="7648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:20 CDT" name="goToLogin" finished-at="2020-05-28T16:40:21 CDT" duration-ms="426" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="createPatient()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:21 CDT" name="createPatient" finished-at="2020-05-28T16:40:31 CDT" duration-ms="9842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPatient -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:31 CDT" name="recordFailure" finished-at="2020-05-28T16:40:31 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createPatient status=SUCCESS method=CreatePatientTests.createPatient()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- createUsers.CreatePatientTests -->
+      <class name="inventory.InventoryTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:07 CDT" name="setUp" finished-at="2020-05-28T16:41:25 CDT" duration-ms="18145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:25 CDT" name="goToLogin" finished-at="2020-05-28T16:41:27 CDT" duration-ms="1779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:27 CDT" name="inventoryCycle" finished-at="2020-05-28T16:42:06 CDT" duration-ms="38845" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inventoryCycle -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:42:06 CDT" name="recordFailure" finished-at="2020-05-28T16:42:06 CDT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=inventoryCycle status=SUCCESS method=InventoryTests.inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- inventory.InventoryTests -->
+      <class name="patients.PatientsTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:44 CDT" name="setUp" finished-at="2020-05-28T16:39:55 CDT" duration-ms="10879" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:55 CDT" name="goToLogin" finished-at="2020-05-28T16:39:56 CDT" duration-ms="452" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:56 CDT" name="addInsurancePolicy" finished-at="2020-05-28T16:40:13 CDT" duration-ms="17064" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addInsurancePolicy -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:40:13 CDT" name="recordFailure" finished-at="2020-05-28T16:40:13 CDT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=addInsurancePolicy status=SUCCESS method=PatientsTests.addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- patients.PatientsTests -->
+    </test> <!-- C:/Users/Student/IdeaProjects/SVOTesting/src/test/java/patients/PatientsTests.java -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

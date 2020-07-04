@@ -1,0 +1,17 @@
+pages\ManagerToolsPage.class
+pages\ProductsPage.class
+utils\Constants.class
+pages\UsersPage.class
+pages\LoginPage.class
+pages\MyClockInsPage.class
+pages\ClosingReportPage.class
+pages\HomePage.class
+pages\PatientsPage.class
+pages\SignInsPage.class
+utils\WindowManager.class
+pages\AddNewPatientPage.class
+pages\OrdersPage.class
+pages\IncomingShipmentsPage.class
+pages\InventoryPage.class
+pages\AddNewUserPage.class
+pages\LabPage.class

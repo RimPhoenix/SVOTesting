@@ -1,0 +1,17 @@
+accessLevel\AccessLevelTests.class
+products\ProductsTests.class
+myclockins\MyClockInsTests.class
+clickLinks\ClickLinksTests.class
+base\BaseTests$1.class
+base\BaseTests.class
+signIns\SignInsTests.class
+inventory\InventoryTests.class
+incomingShipments\IncomingShipmentsTests.class
+createUsers\CreateUsersTests.class
+orders\OrdersTests.class
+closingReport\ClosingReportTests.class
+orders\CreateOrdersTests.class
+myclockins\ClockInTests.class
+createUsers\CreatePatientTests.class
+lab\LabTests.class
+patients\PatientsTests.class
