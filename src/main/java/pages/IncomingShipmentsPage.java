@@ -20,11 +20,13 @@ public class IncomingShipmentsPage {
         return driver.getTitle(); }
 
     private By newPackingSlipBtn = By.xpath("//body[contains(@class,'')]/main[contains(@class,'container-fluid')]/div[contains(@class,'packing_slips index')]/a[1]//*[local-name()='svg']//*[name()='path' and contains(@fill,'currentCol')]");
-    private By packingSlipDestination = By.id("packing_slip_destination_id");
-    private By packingSlipTrackingNumber = By.id("packing_slip_tracking_number");
+    private By packingSlipDestination = By.cssSelector("#packing_slip_destination_id");
+    private Select findPackingSlipDestination() {return new Select(driver.findElement(packingSlipDestination));}
+    private By packingSlipTrackingNumber = By.cssSelector("#packing_slip_tracking_number");
     private By createPackingSlipBtn = By.xpath("//button[contains(@class,'btn btn-primary')]");
     private By addItemBtn = By.xpath("//a[contains(@class,'btn btn-info')]");
-    private By itemField = By.id("select2-line_item_inventoried_item_sku-line_item-new-container");
+    private By changeWindow = By.xpath("//label[contains(text(),'Item')]");
+    private By itemField = By.cssSelector("#select2-line_item_inventoried_item_sku-line_item-new-container");
     private By itemSearchField = By.className("select2-search__field");
     private By changeQuantity = By.id("line_item_quantity-line_item-new");
     private By addLineItemBtn = By.xpath("//div[contains(@class,'modal-footer')]//input[contains(@name,'commit')]");
@@ -51,9 +53,9 @@ public class IncomingShipmentsPage {
 
     public void setNewPackingSlipBtn() {driver.findElement(newPackingSlipBtn).click();    }
 
-    private Select chooseDestination() {return new Select(driver.findElement(packingSlipDestination));}
-
-    public void selectPackageDestination(String option) {chooseDestination().selectByVisibleText(option);}
+    public void selectPackageDestination(String option) {WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.elementToBeClickable(packingSlipDestination));
+        findPackingSlipDestination().selectByVisibleText(option);}
 
     public void setPackingSlipTrackingNumber(String trackingNumber){driver.findElement(packingSlipTrackingNumber).clear();
          driver.findElement(packingSlipTrackingNumber).sendKeys(trackingNumber);}
@@ -63,7 +65,10 @@ public class IncomingShipmentsPage {
 
     public void setAddItemBtn() {driver.findElement(addItemBtn).click();}
 
-    public void setItemField() {driver.findElement(itemField).click();}
+    public void setChangeWindow() {driver.findElement(changeWindow).isDisplayed();}
+
+    public void setItemField() {WebDriverWait wait = new WebDriverWait(driver, 3);
+        wait.until(ExpectedConditions.elementToBeClickable(itemField)).click();}
 
     public void setItemSearchField(String item) {WebDriverWait wait = new WebDriverWait(driver, 3);
         wait.until(ExpectedConditions.presenceOfElementLocated(itemSearchField)).sendKeys(item); }

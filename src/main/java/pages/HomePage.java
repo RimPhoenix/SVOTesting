@@ -12,10 +12,10 @@ public class HomePage {
     }
 
     private By clockInBtn = By.xpath("//div[@class='d-lg-block d-none']//input[@name='commit']");
-    private By confirmClockIn_Out = By.xpath("//h3[@class='clocked-in-header']");
+    private By confirmClockIn_Out = By.className("clocked-in-header");
 
     private void clickLink(String linkText) {
-        driver.findElement(By.linkText(linkText)).click();
+        driver.findElement(By.partialLinkText(linkText)).click();
     }
 
     public void setClockInBtn() {

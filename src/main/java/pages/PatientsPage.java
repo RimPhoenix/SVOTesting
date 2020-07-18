@@ -89,7 +89,7 @@ public class PatientsPage {
     public void setCreatBtn(){driver.findElement(creatBtn).click();}
 
     private By clickSearchBtn = By.xpath("//main[@class='container-fluid']//button[1]");
-    public void setClickSearchBtn(){WebDriverWait wait = new WebDriverWait(driver, 3);
+    public void setClickSearchBtn(){WebDriverWait wait = new WebDriverWait(driver, 4);
         wait.until(ExpectedConditions.elementToBeClickable(clickSearchBtn));
         driver.findElement(clickSearchBtn).click();}
 

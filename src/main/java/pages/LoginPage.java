@@ -56,11 +56,9 @@ public class LoginPage {
         WebElement loginButton = driver.findElement(By.name("button"));
         loginButton.click();
 
-        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//a[@href='/access/profile' and text()='Robbie Moritz']"))));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Robbie Moritz']")));
 
         printLoggedInMessage("Admin");
-        driver.findElement(By.xpath("//a[@href='/access/profile' and text()='Robbie Moritz']"));
 
     }
 

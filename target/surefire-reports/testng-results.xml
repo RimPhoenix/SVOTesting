@@ -1,29 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="5" total="10" passed="5" failed="0" skipped="0">
+<testng-results ignored="5" total="10" passed="1" failed="4" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-28T16:39:44 CDT" name="All Test Suite" finished-at="2020-05-28T16:42:42 CDT" duration-ms="177908">
+  <suite started-at="2020-07-09T00:25:39 CDT" name="All Test Suite" finished-at="2020-07-09T00:28:30 CDT" duration-ms="171063">
     <groups>
     </groups>
-    <test started-at="2020-05-28T16:39:44 CDT" name="C:/Users/Student/IdeaProjects/SVOTesting/src/test/java/patients/PatientsTests.java" finished-at="2020-05-28T16:42:42 CDT" duration-ms="177908">
+    <test started-at="2020-07-09T00:25:39 CDT" name="C:/Users/Student/IdeaProjects/SVOTesting/src/test/java/patients/PatientsTests.java" finished-at="2020-07-09T00:28:30 CDT" duration-ms="171063">
       <class name="incomingShipments.IncomingShipmentsTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:06 CDT" name="setUp" finished-at="2020-05-28T16:42:19 CDT" duration-ms="13317" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-07-09T00:27:34 CDT" name="setUp" finished-at="2020-07-09T00:28:17 CDT" duration-ms="43049" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="goToLogin()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:19 CDT" name="goToLogin" finished-at="2020-05-28T16:42:22 CDT" duration-ms="3219" status="PASS">
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-07-09T00:28:17 CDT" name="goToLogin" finished-at="2020-07-09T00:28:23 CDT" duration-ms="5931" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToLogin -->
-        <test-method signature="packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:22 CDT" name="packingSlipsForTerminal" finished-at="2020-05-28T16:42:42 CDT" duration-ms="20086" status="PASS">
+        <test-method signature="packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-07-09T00:28:23 CDT" name="packingSlipsForTerminal" finished-at="2020-07-09T00:28:30 CDT" duration-ms="6564" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61378}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b077f511074e1de25dc6967abe545854]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61378}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b077f511074e1de25dc6967abe545854
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:470)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at pages.LoginPage.adminLogin(LoginPage.java:60)
+at incomingShipments.IncomingShipmentsTests.packingSlipsForTerminal(IncomingShipmentsTests.java:87)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- packingSlipsForTerminal -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-05-28T16:42:42 CDT" name="recordFailure" finished-at="2020-05-28T16:42:42 CDT" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6]" started-at="2020-07-09T00:28:30 CDT" name="recordFailure" finished-at="2020-07-09T00:28:30 CDT" duration-ms="444" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=packingSlipsForTerminal status=SUCCESS method=IncomingShipmentsTests.packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6] output={null}]]]>
+                <![CDATA[[TestResult name=packingSlipsForTerminal status=FAILURE method=IncomingShipmentsTests.packingSlipsForTerminal()[pri:0, instance:incomingShipments.IncomingShipmentsTests@1f1c7bf6] output={null}]]]>
               </value>
             </param>
           </params>
@@ -31,45 +113,20 @@
           </reporter-output>
         </test-method> <!-- recordFailure -->
       </class> <!-- incomingShipments.IncomingShipmentsTests -->
-      <class name="createUsers.CreateUsersTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:31 CDT" name="setUp" finished-at="2020-05-28T16:40:45 CDT" duration-ms="14003" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:45 CDT" name="goToLogin" finished-at="2020-05-28T16:40:45 CDT" duration-ms="463" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- goToLogin -->
-        <test-method signature="createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:40:45 CDT" name="createManager" finished-at="2020-05-28T16:41:07 CDT" duration-ms="21682" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createManager -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-05-28T16:41:07 CDT" name="recordFailure" finished-at="2020-05-28T16:41:07 CDT" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=createManager status=SUCCESS method=CreateUsersTests.createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-      </class> <!-- createUsers.CreateUsersTests -->
       <class name="createUsers.CreatePatientTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:13 CDT" name="setUp" finished-at="2020-05-28T16:40:20 CDT" duration-ms="7648" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-07-09T00:26:01 CDT" name="setUp" finished-at="2020-07-09T00:26:15 CDT" duration-ms="14065" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:20 CDT" name="goToLogin" finished-at="2020-05-28T16:40:21 CDT" duration-ms="426" status="PASS">
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-07-09T00:26:15 CDT" name="goToLogin" finished-at="2020-07-09T00:26:16 CDT" duration-ms="1715" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToLogin -->
-        <test-method signature="createPatient()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:21 CDT" name="createPatient" finished-at="2020-05-28T16:40:31 CDT" duration-ms="9842" status="PASS">
+        <test-method signature="createPatient()[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-07-09T00:26:16 CDT" name="createPatient" finished-at="2020-07-09T00:26:26 CDT" duration-ms="9780" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPatient -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-05-28T16:40:31 CDT" name="recordFailure" finished-at="2020-05-28T16:40:31 CDT" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreatePatientTests@7d68ef40]" started-at="2020-07-09T00:26:26 CDT" name="recordFailure" finished-at="2020-07-09T00:26:26 CDT" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -81,24 +138,213 @@
           </reporter-output>
         </test-method> <!-- recordFailure -->
       </class> <!-- createUsers.CreatePatientTests -->
-      <class name="inventory.InventoryTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:07 CDT" name="setUp" finished-at="2020-05-28T16:41:25 CDT" duration-ms="18145" status="PASS">
+      <class name="createUsers.CreateUsersTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-07-09T00:26:26 CDT" name="setUp" finished-at="2020-07-09T00:26:42 CDT" duration-ms="16256" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="goToLogin()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:25 CDT" name="goToLogin" finished-at="2020-05-28T16:41:27 CDT" duration-ms="1779" status="PASS">
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-07-09T00:26:42 CDT" name="goToLogin" finished-at="2020-07-09T00:26:44 CDT" duration-ms="2010" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToLogin -->
-        <test-method signature="inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:41:27 CDT" name="inventoryCycle" finished-at="2020-05-28T16:42:06 CDT" duration-ms="38845" status="PASS">
+        <test-method signature="createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-07-09T00:26:44 CDT" name="createManager" finished-at="2020-07-09T00:26:50 CDT" duration-ms="5374" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61234}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 066e636c17a86c650de84d9fd6a5a913]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61234}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 066e636c17a86c650de84d9fd6a5a913
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:470)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at pages.LoginPage.adminLogin(LoginPage.java:60)
+at createUsers.CreateUsersTests.createManager(CreateUsersTests.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- inventoryCycle -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-05-28T16:42:06 CDT" name="recordFailure" finished-at="2020-05-28T16:42:06 CDT" duration-ms="0" status="PASS">
+        </test-method> <!-- createManager -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:createUsers.CreateUsersTests@5b0abc94]" started-at="2020-07-09T00:26:50 CDT" name="recordFailure" finished-at="2020-07-09T00:26:50 CDT" duration-ms="531" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=inventoryCycle status=SUCCESS method=InventoryTests.inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb] output={null}]]]>
+                <![CDATA[[TestResult name=createManager status=FAILURE method=CreateUsersTests.createManager()[pri:0, instance:createUsers.CreateUsersTests@5b0abc94] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+      </class> <!-- createUsers.CreateUsersTests -->
+      <class name="inventory.InventoryTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-07-09T00:26:50 CDT" name="setUp" finished-at="2020-07-09T00:27:26 CDT" duration-ms="35876" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-07-09T00:27:26 CDT" name="goToLogin" finished-at="2020-07-09T00:27:29 CDT" duration-ms="3030" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToLogin -->
+        <test-method signature="inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-07-09T00:27:29 CDT" name="inventoryCycle" finished-at="2020-07-09T00:27:34 CDT" duration-ms="4484" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61298}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b7a9c7501735f1ef0418e058125957c7]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61298}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: b7a9c7501735f1ef0418e058125957c7
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:470)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at pages.LoginPage.adminLogin(LoginPage.java:60)
+at inventory.InventoryTests.inventoryCycle(InventoryTests.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- inventoryCycle -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:inventory.InventoryTests@75c072cb]" started-at="2020-07-09T00:27:34 CDT" name="recordFailure" finished-at="2020-07-09T00:27:34 CDT" duration-ms="632" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=inventoryCycle status=FAILURE method=InventoryTests.inventoryCycle()[pri:0, instance:inventory.InventoryTests@75c072cb] output={null}]]]>
               </value>
             </param>
           </params>
@@ -107,23 +353,105 @@
         </test-method> <!-- recordFailure -->
       </class> <!-- inventory.InventoryTests -->
       <class name="patients.PatientsTests">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:44 CDT" name="setUp" finished-at="2020-05-28T16:39:55 CDT" duration-ms="10879" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-07-09T00:25:39 CDT" name="setUp" finished-at="2020-07-09T00:25:54 CDT" duration-ms="14705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="goToLogin()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:55 CDT" name="goToLogin" finished-at="2020-05-28T16:39:56 CDT" duration-ms="452" status="PASS">
+        <test-method is-config="true" signature="goToLogin()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-07-09T00:25:54 CDT" name="goToLogin" finished-at="2020-07-09T00:25:55 CDT" duration-ms="939" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- goToLogin -->
-        <test-method signature="addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:39:56 CDT" name="addInsurancePolicy" finished-at="2020-05-28T16:40:13 CDT" duration-ms="17064" status="PASS">
+        <test-method signature="addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-07-09T00:25:55 CDT" name="addInsurancePolicy" finished-at="2020-07-09T00:26:00 CDT" duration-ms="4668" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61127}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0232d87784148b36f5de83e4ff921dc1]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=83.0.4103.116)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'RMORITZ', ip: '192.168.1.26', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 83.0.4103.116, chrome: {chromedriverVersion: 83.0.4103.39 (ccbf011cb2d2b..., userDataDir: C:\Users\Student\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61127}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: 0232d87784148b36f5de83e4ff921dc1
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.lambda$new$0(EventFiringWebDriver.java:404)
+at com.sun.proxy.$Proxy9.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isDisplayed(EventFiringWebDriver.java:470)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at pages.LoginPage.adminLogin(LoginPage.java:60)
+at patients.PatientsTests.addInsurancePolicy(PatientsTests.java:23)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:134)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:597)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:816)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1510)
+at org.testng.TestRunner.privateRun(TestRunner.java:766)
+at org.testng.TestRunner.run(TestRunner.java:587)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1109)
+at org.testng.TestNG.runSuites(TestNG.java:1039)
+at org.testng.TestNG.run(TestNG.java:1007)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:377)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:138)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:465)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addInsurancePolicy -->
-        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-05-28T16:40:13 CDT" name="recordFailure" finished-at="2020-05-28T16:40:13 CDT" duration-ms="4" status="PASS">
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:patients.PatientsTests@123f1134]" started-at="2020-07-09T00:26:00 CDT" name="recordFailure" finished-at="2020-07-09T00:26:01 CDT" duration-ms="748" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addInsurancePolicy status=SUCCESS method=PatientsTests.addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134] output={null}]]]>
+                <![CDATA[[TestResult name=addInsurancePolicy status=FAILURE method=PatientsTests.addInsurancePolicy()[pri:0, instance:patients.PatientsTests@123f1134] output={null}]]]>
               </value>
             </param>
           </params>
