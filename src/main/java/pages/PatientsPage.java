@@ -15,7 +15,7 @@ public class PatientsPage {
     private By searchBox = By.name("search");
     private By resultText = By.id("dt-patient_100");
     private By closeBtn = By.xpath("//div[@id='search-patient-modal']");
-    private By addNewPatientBtn = By.xpath("//button[@data-original-title='New Patient']");
+    private By addNewPatientBtn = By.xpath("//button[2]");
 
     public PatientsPage(WebDriver driver)  {this.driver = driver;}
 

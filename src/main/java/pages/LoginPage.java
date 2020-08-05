@@ -211,10 +211,17 @@ public class LoginPage {
 
         WebElement pwBox = driver.findElement(By.name("password"));
         pwBox.click();
-        pwBox.sendKeys(Constants.TestManagerPW);
+        pwBox.sendKeys(Constants.TestManagerPW + Keys.ENTER);
+
+        FluentWait wait = new FluentWait(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(1))
+                .ignoring(NoSuchElementException.class);
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.id("store"))));
+
+        driver.findElement(By.name("store")).click();
         WebElement loginButton = driver.findElement(By.name("button"));
         loginButton.click();
-        WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='/access/profile' and text()='Manager TestCreated']")));
         printLoggedInMessage("Manager TestCreated");
 

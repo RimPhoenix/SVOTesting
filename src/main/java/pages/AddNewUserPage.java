@@ -3,12 +3,15 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AddNewUserPage {
 
     private WebDriver driver;
-    private By firstNameField = By.xpath("//input[@id='first_name_user-new']");
+    private By firstNameField = By.id("first_name_user-new");
     private By lastNameField = By.id("last_name_user-new");
     private By idField = By.id("user_id_user-new");
     private By roleField = By.id("role_user-new");
@@ -48,8 +51,12 @@ public class AddNewUserPage {
     public String getTitle() {
         return driver.getTitle();
     }
-    public void setNewRoleField() { driver.findElement(newRoleField).click(); }
+    public void setNewRoleField() { WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(newRoleField));
+        driver.findElement(newRoleField).click(); }
     public void setFirstNameField(String firstName) {
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(firstNameField));
         driver.findElement(firstNameField).sendKeys(firstName);
     }
 
@@ -61,8 +68,7 @@ public class AddNewUserPage {
         driver.findElement(idField).sendKeys(idNumber);
     }
 
-    public void selectFromRoles(String role) {
-        findRole().selectByValue(role);
+    public void selectFromRoles(String role) { findRole().selectByValue(role);
     }
 
     public void selectStore(String store) {
@@ -90,7 +96,8 @@ public class AddNewUserPage {
         driver.get(rolesPage);
     }
 
-    public void setNewRoleBtn() {
+    public void setNewRoleBtn() {WebDriverWait wait = new WebDriverWait(driver, 2);
+        wait.until(ExpectedConditions.presenceOfElementLocated(newRoleBtn));
         driver.findElement(newRoleBtn).click();
     }
 

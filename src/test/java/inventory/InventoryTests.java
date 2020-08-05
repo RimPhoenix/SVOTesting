@@ -21,7 +21,7 @@ public class InventoryTests extends BaseTests {
     }
 
     @Test
-    public void inventoryCycle() {
+    public void inventoryCycle() throws InterruptedException {
         loginPage.adminLogin();
         InventoryPage inventoryPage = homePage.clickInventory();
         System.out.println(inventoryPage.getTitle());
@@ -33,6 +33,7 @@ public class InventoryTests extends BaseTests {
         inventoryPage.setEmptyProductFieldWithProduct("346" + Keys.ENTER);
         inventoryPage.setSubmitProductBtn();
         inventoryPage.setSearchField("346 1500" + Keys.ENTER);
+        Thread.sleep(200);
         System.out.println("New Product added to the Inventory");
         inventoryPage.setTrashNewProduct();
         inventoryPage.alert_getText();
@@ -40,11 +41,11 @@ public class InventoryTests extends BaseTests {
         assertEquals(alertText, "Are you sure you want to delete 1500 forms - 100 pack?", "Wrong Item, don't delete");
         inventoryPage.alert_clickToAccept();
         System.out.println("Same New Product removed from the Inventory");
-        inventoryPage.setSearchField("4oz" + Keys.ENTER);
+        inventoryPage.setSearchField("4oz " + Keys.ENTER);
         inventoryPage.setCheckInventoriedItem();
         System.out.println("Now looking at a 4oz bottle page");
-        inventoryPage.setCheckBatchID();
-        System.out.println("Now looking at the batch ID for the 4oz bottle");
+//        inventoryPage.setCheckBatchID();
+//        System.out.println("Now looking at the batch ID for the 4oz bottle");
         String quantityBeforeText = inventoryPage.setQuantityBefore();
         String quantityBeforeAmountText = inventoryPage.setQuantityBeforeAmount();
         String quantityAfterText = inventoryPage.setQuantityAfter();

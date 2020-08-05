@@ -41,7 +41,7 @@ public class CreatePatientTests extends BaseTests {
         patientsPage.setDoctorSelectField("SamuelPresley" + Keys.ENTER);
         patientsPage.selectRxType("distance_only");
         patientsPage.setPrescribedDate(todaysDate);
-        patientsPage.setOdSphPrescription("1.25");
+        patientsPage.setOdSphPrescription("-1.25");
         patientsPage.setOsSphPrescription("-3.5");
         patientsPage.setFpdOdPrescription("23");
         patientsPage.setFpdOsPrescription("25");

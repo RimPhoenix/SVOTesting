@@ -26,7 +26,7 @@ public class InventoryPage {
         private By submitProductBtn = By.xpath("//div[@class='modal-footer']//input[@name='commit']");
         private By searchField = By.xpath("//label[contains(text(),'Search:')]//input");
         private By trashNewProduct = By.xpath("//a[contains(@class,'btn text-primary')]//*[local-name()='svg']");
-        private By checkInventoriedItem = By.xpath("//a[contains(text(),'Spray Cleaner 4oz')]");
+        private By checkInventoriedItem = By.partialLinkText("Spray Cleaner 4");
         private By checkBatchID = By.xpath("//a[contains(text(),'110')]");
         private By quantityBefore = By.cssSelector("body.access-grid:nth-child(2) main.container-fluid:nth-child(4) div.batches.show div.card div.card-body table.nowrap.responsive.table.table-sm:nth-child(3) thead:nth-child(1) tr:nth-child(1) > th.text-center:nth-child(3)");
         private By quantityBeforeAmount = By.cssSelector("body.access-grid:nth-child(2) main.container-fluid:nth-child(4) div.batches.show div.card div.card-body table.nowrap.responsive.table.table-sm:nth-child(3) tbody:nth-child(2) tr:nth-child(1) > td.text-center:nth-child(3)");
@@ -56,8 +56,10 @@ public class InventoryPage {
 
     public void setSubmitProductBtn(){driver.findElement(submitProductBtn).click();}
 
-    public void setSearchField(String product){driver.findElement(searchField).clear();
-        driver.findElement(searchField).sendKeys(product);}
+    public void setSearchField(String product){WebDriverWait wait = new WebDriverWait(driver, 2);
+        driver.findElement(searchField).clear();
+        driver.findElement(searchField).sendKeys(product);
+        wait.until(ExpectedConditions.presenceOfElementLocated(searchField));        }
 
     public void setTrashNewProduct(){WebDriverWait wait = new WebDriverWait(driver, 3);
         try {
